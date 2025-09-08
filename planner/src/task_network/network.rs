@@ -74,6 +74,10 @@ impl HTN {
         }).collect()
     }
 
+    pub fn get_task_id_set(&self) -> HashSet<u32> {
+        self.network.nodes.iter().copied().collect()
+    }
+
     pub fn count_tasks(&self) -> usize {
         self.network.count_nodes()
     }
@@ -95,6 +99,10 @@ impl HTN {
 
     pub fn get_incoming_edges(&self, id: u32) -> BTreeSet<u32> {
         self.network.get_incoming_edges(id)
+    }
+
+    pub fn get_outgoing_edges(&self, id: u32) -> BTreeSet<u32> {
+        self.network.get_outgoing_edges(id)
     }
 
     pub fn decompose(&self, id: u32, method: &Method) -> HTN {

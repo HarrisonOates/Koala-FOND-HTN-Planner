@@ -2,6 +2,7 @@ from solve import solve
 import sys
 from glob import glob
 import resource
+from os import chdir
 
 if __name__ == "__main__":
     mem_limit = 8_589_934_592
@@ -12,7 +13,7 @@ if __name__ == "__main__":
         resource.setrlimit(resource.RLIMIT_AS, (mem_limit, mem_limit))
         for arg in args[1:]:
             print(f"Solving domain {arg}:")
-            filenames = glob(arg + '*')
+            filenames = glob(f"domains/{arg}/" + '*')
             domain = None
             problems = []
             for filename in filenames:
@@ -28,7 +29,11 @@ if __name__ == "__main__":
             for i, problem in enumerate(problems):
                 print(f"\tproblem {i+1} out of {n_problems}: {problem}")
                 try:
-                    solve(domain, problem)
+                    solve(domain, problem, ["--fixed", "--add"])
+                    solve(domain, problem, ["--fixed", "--max"])
+                    solve(domain, problem, ["--fixed", "--ff"])
+                    #solve(domain, problem, ["--flexible", "--add"])
+                    #solve(domain, problem, ["--flexible", "--max"])
+                    #solve(domain, problem, ["--flexible", "--ff"])
                 except MemoryError:
                     print(f'\t\tmemory limit reached.')
-
