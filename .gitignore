@@ -5,3 +5,5 @@
 *.sas+
 *.txt
 domains/qcomp-master/*
+domains/PuMoC/*
+for-reference/*
