@@ -246,3 +246,112 @@ def get_a_clauses(expr) -> list:
     if isinstance(expr, And):
         return list(expr.args)
     return [expr]
+
+
+# ---------------------------------------------------------------------------
+# Task 3: Parameter tracking and precon_from_ass
+# ---------------------------------------------------------------------------
+
+leaves: set = set()
+left_leaves: set = set()
+pre_set_int: set = set()
+
+
+def search_leaves(node, dest_count: int):
+    """Collect variables that need parameters in the action signature."""
+    global leaves, left_leaves, pre_set_int
+    if isinstance(node, dict):
+        if "op" in node:
+            op = node["op"]
+            if op == "=":
+                if not isinstance(node["right"], int) and not isinstance(node["left"], bool):
+                    leaves.add(node["left"])
+                    left_leaves.add(node["left"] + str(dest_count))
+                    if not isinstance(node["right"], dict):
+                        leaves.add(node["right"])
+                    return
+                elif isinstance(node["right"], int) and not isinstance(node["left"], dict):
+                    pre_set_int.add(node["left"])
+                    return
+            elif op == "\u2260":
+                if not isinstance(node["right"], int):
+                    search_leaves(node["left"], dest_count)
+                    search_leaves(node["right"], dest_count)
+                return
+            elif op in {"\u003C", "\u003E", "\u2264", "\u2265"}:
+                if not isinstance(node["right"], int):
+                    leaves.add(node["right"])
+                if not isinstance(node["left"], int):
+                    leaves.add(node["left"])
+                return
+        if "left" in node:
+            if not isinstance(node["right"], int):
+                search_leaves(node["left"], dest_count)
+                search_leaves(node["right"], dest_count)
+            else:
+                if not isinstance(node["left"], (int, dict)):
+                    left_leaves.add(node["left"] + str(dest_count))
+                else:
+                    search_leaves(node["left"], dest_count)
+        else:  # (not ...)
+            search_leaves(node["exp"], dest_count)
+    else:
+        if not isinstance(node, int) and node not in bool_vars:
+            leaves.add(node)
+
+
+def precon_from_ass(ass_list: list, j: int, res_init: set,
+                    curr_leaves: set, dest_count: int, precon_set: set):
+    """
+    Add preconditions required for arithmetic assignments.
+    Mirrors preconFromAss() from jani2ppddl.py.
+    This handles cases where an effect assignment is arithmetic (e.g. var = var+1),
+    requiring the current value of the variable in the precondition.
+    """
+    for assign in ass_list:
+        ref = str(assign["ref"])
+        val = assign["value"]
+        # Only process if assignment is arithmetic (dict) not a literal
+        if isinstance(val, dict):
+            if ref not in res_init:
+                if ref in curr_leaves:
+                    pass  # already captured via search_leaves
+                else:
+                    precon_set.add(f"\t\t\t(value {ref} ?v{ref})\n")
+
+
+def build_param_string(
+    curr_leaves: set,
+    curr_left_leaves: set,
+    auto_name: str,
+) -> tuple[str, list[str]]:
+    """
+    Build the HDDL parameter string (for :parameters) and a list of
+    parameter names (for the method subtask call).
+    Returns (param_str, param_names).
+    """
+    param_str = ""
+    param_names = []
+    for lv in sorted(curr_leaves):
+        if lv in var_dict:
+            param_str += f"\n\t\t ?v{lv} - num"
+            param_names.append(f"?v{lv}")
+        elif auto_name in loc_var_dict and lv in loc_var_dict[auto_name]:
+            param_str += f"\n\t\t ?v{lv}_{auto_name} - num"
+            param_names.append(f"?v{lv}_{auto_name}")
+        else:
+            param_str += f"\n\t\t ?v{lv} - num"
+            param_names.append(f"?v{lv}")
+    for ll in sorted(curr_left_leaves):
+        m = re.search(r'\d+$', ll)
+        test_var = ll[:-1] if m else ll
+        if test_var in var_dict:
+            param_str += f"\n\t\t ?vl{ll} - num"
+            param_names.append(f"?vl{ll}")
+        elif auto_name in loc_var_dict and test_var in loc_var_dict[auto_name]:
+            param_str += f"\n\t\t ?vl{ll}_{auto_name} - num"
+            param_names.append(f"?vl{ll}_{auto_name}")
+        else:
+            param_str += f"\n\t\t ?vl{ll} - num"
+            param_names.append(f"?vl{ll}")
+    return param_str, param_names
