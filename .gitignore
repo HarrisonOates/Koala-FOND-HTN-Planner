@@ -7,3 +7,4 @@
 domains/qcomp-master/*
 domains/PuMoC/*
 for-reference/*
+.worktrees/
