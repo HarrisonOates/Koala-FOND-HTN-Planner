@@ -1,0 +1,18 @@
+(define
+    (problem metro_1)
+    (:domain fail_metro)
+    (:objects
+        station_1 - station
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (visit station_1))
+            (task1 (final_check))
+        )
+        :ordering (and
+            (< task0 task1)
+        )
+    )
+    (:init)
+)

@@ -1,0 +1,87 @@
+(define (domain fail_lights)
+    (:requirements :typing :hierarchy)
+    (:types light)
+    (:predicates
+        (on ?l - light)
+        (off ?l - light)
+        (broken ?l - light)
+        (failed)
+    )
+
+    (:task inspect_light :parameters (?l - light))
+    (:task maybe_change_bulb :parameters (?l - light))
+
+    (:method m_inspect_light_0
+        :parameters (?l - light)
+        :task (inspect_light ?l)
+        :subtasks (and
+            (task0 (observe ?l))
+            (task1 (turn_on ?l))
+            (task2 (turn_off ?l))
+            (task3 (decide_condition ?l))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task0 task2)
+            (< task1 task3)
+            (< task2 task3)
+        )
+    )
+
+    (:method m_maybe_change_bulb_0
+        :parameters (?l - light)
+        :task (maybe_change_bulb ?l)
+        :subtasks (and (task0 (change_bulb ?l)))
+    )
+
+    (:method m_maybe_change_bulb_1
+        :parameters (?l - light)
+        :task (maybe_change_bulb ?l)
+        :subtasks (and (task0 (dont_change_bulb ?l)))
+    )
+
+    (:action observe
+        :parameters (?l - light)
+        :precondition ()
+        :effect (probabilistic 0.7 (on ?l) 0.3 (off ?l))
+    )
+
+    (:action turn_off
+        :parameters (?l - light)
+        :precondition (on ?l)
+        :effect (and (off ?l) (not (on ?l)))
+    )
+
+    (:action turn_on
+        :parameters (?l - light)
+        :precondition (off ?l)
+        :effect (and (on ?l) (not (off ?l)))
+    )
+
+    (:action decide_condition
+        :parameters (?l - light)
+        :precondition ()
+        :effect (probabilistic 0.6 () 0.4 (broken ?l))
+    )
+
+    (:action change_bulb
+        :parameters (?l - light)
+        :precondition ()
+        :effect (probabilistic 0.9 (not (broken ?l)) 0.1 (failed))
+    )
+
+    (:action dont_change_bulb
+        :parameters (?l - light)
+        :precondition ()
+        :effect ()
+    )
+
+    (:action verify
+        :parameters ()
+        :precondition (and
+            (forall (?l - light) (not (broken ?l)))
+            (not (failed))
+        )
+        :effect ()
+    )
+)

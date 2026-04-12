@@ -1,0 +1,51 @@
+(define (domain prob_sequential_retry)
+    (:requirements :typing :hierarchy)
+    (:types step rtoken)
+    (:predicates
+        (done ?s - step)
+        (next_rtoken ?t1 - rtoken ?t2 - rtoken)
+    )
+
+    (:task do_phase :parameters (?s - step ?t - rtoken))
+
+    ;; Base case: one attempt then gate. Succeeds iff attempt succeeds (prob 0.5).
+    (:method m_base
+        :parameters (?s - step ?t - rtoken)
+        :task (do_phase ?s ?t)
+        :subtasks (and
+            (t0 (try_phase ?s))
+            (t1 (gate_phase ?s))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Recursive case: attempt, then retry with the next token.
+    ;; Only applicable when a next rtoken exists.
+    (:method m_recurse
+        :parameters (?s - step ?t - rtoken ?t_next - rtoken)
+        :task (do_phase ?s ?t)
+        :precondition (next_rtoken ?t ?t_next)
+        :subtasks (and
+            (t0 (try_phase ?s))
+            (t1 (do_phase ?s ?t_next))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Nondeterministic attempt: p=0.5 sets done(?s), p=0.5 does nothing.
+    (:action try_phase
+        :parameters (?s - step)
+        :precondition ()
+        :effect (probabilistic
+            0.5 (done ?s)
+            0.5 ()
+        )
+    )
+
+    ;; Gate: only passable once done(?s) is set.
+    (:action gate_phase
+        :parameters (?s - step)
+        :precondition (done ?s)
+        :effect ()
+    )
+)

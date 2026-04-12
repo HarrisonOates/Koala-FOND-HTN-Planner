@@ -1,0 +1,26 @@
+(define
+    (problem lunch_3)
+    (:domain fail_lunch)
+    (:objects
+        door_0 - door
+        door_1 - door
+        door_2 - door
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (inspect_door door_0))
+            (task1 (inspect_door door_1))
+            (task2 (inspect_door door_2))
+            (task3 (eat_lunch))
+            (task4 (final_check))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+            (< task2 task3)
+            (< task3 task4)
+        )
+    )
+    (:init)
+)

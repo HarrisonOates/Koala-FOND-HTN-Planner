@@ -1,0 +1,164 @@
+(define (domain prob_method_select_k08)
+    (:requirements :typing :hierarchy)
+    (:predicates (done))
+
+    (:task solve :parameters ())
+
+    (:method m_solve_0
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_0))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_1
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_1))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_2
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_2))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_3
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_3))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_4
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_4))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_5
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_5))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_6
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_6))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_7
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_7))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:action try_0
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.11111111 (done)
+            0.88888889 ()
+        )
+    )
+
+    (:action try_1
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.22222222 (done)
+            0.77777778 ()
+        )
+    )
+
+    (:action try_2
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.33333333 (done)
+            0.66666667 ()
+        )
+    )
+
+    (:action try_3
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.44444444 (done)
+            0.55555556 ()
+        )
+    )
+
+    (:action try_4
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.55555556 (done)
+            0.44444444 ()
+        )
+    )
+
+    (:action try_5
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.66666667 (done)
+            0.33333333 ()
+        )
+    )
+
+    (:action try_6
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.77777778 (done)
+            0.22222222 ()
+        )
+    )
+
+    (:action try_7
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.88888889 (done)
+            0.11111111 ()
+        )
+    )
+
+    (:action gate
+        :parameters ()
+        :precondition (done)
+        :effect ()
+    )
+)

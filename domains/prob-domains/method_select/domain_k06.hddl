@@ -1,0 +1,126 @@
+(define (domain prob_method_select_k06)
+    (:requirements :typing :hierarchy)
+    (:predicates (done))
+
+    (:task solve :parameters ())
+
+    (:method m_solve_0
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_0))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_1
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_1))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_2
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_2))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_3
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_3))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_4
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_4))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_5
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_5))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:action try_0
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.14285714 (done)
+            0.85714286 ()
+        )
+    )
+
+    (:action try_1
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.28571429 (done)
+            0.71428571 ()
+        )
+    )
+
+    (:action try_2
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.42857143 (done)
+            0.57142857 ()
+        )
+    )
+
+    (:action try_3
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.57142857 (done)
+            0.42857143 ()
+        )
+    )
+
+    (:action try_4
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.71428571 (done)
+            0.28571429 ()
+        )
+    )
+
+    (:action try_5
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.85714286 (done)
+            0.14285714 ()
+        )
+    )
+
+    (:action gate
+        :parameters ()
+        :precondition (done)
+        :effect ()
+    )
+)

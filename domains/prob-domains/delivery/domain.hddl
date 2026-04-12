@@ -1,0 +1,84 @@
+(define (domain prob_delivery)
+    (:requirements :typing :hierarchy)
+    (:types location package)
+    (:predicates
+        (at-robot ?l - location)
+        (at-pkg ?p - package ?l - location)
+        (holding ?p - package)
+        (delivered ?p - package ?l - location)
+        (connected ?l1 - location ?l2 - location)
+    )
+
+    (:task deliver :parameters (?p - package ?to - location))
+    (:task goto :parameters (?to - location))
+    (:task fetch :parameters (?p - package ?from - location))
+
+    (:method m_deliver
+        :parameters (?p - package ?to - location ?from - location)
+        :task (deliver ?p ?to)
+        :subtasks (and
+            (t0 (goto ?from))
+            (t1 (fetch ?p ?from))
+            (t2 (goto ?to))
+            (t3 (drop ?p ?to))
+        )
+        :ordering (and
+            (< t0 t1)
+            (< t1 t2)
+            (< t2 t3)
+        )
+    )
+
+    (:method m_goto_already
+        :parameters (?to - location)
+        :task (goto ?to)
+        :precondition (at-robot ?to)
+        :subtasks (and (t0 (noop)))
+    )
+
+    (:method m_goto_step
+        :parameters (?to - location ?via - location)
+        :task (goto ?to)
+        :subtasks (and
+            (t0 (move ?via ?to))
+            (t1 (goto ?to))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_fetch
+        :parameters (?p - package ?l - location)
+        :task (fetch ?p ?l)
+        :subtasks (and (t0 (pickup ?p ?l)))
+    )
+
+    (:action move
+        :parameters (?from - location ?to - location)
+        :precondition (and (at-robot ?from) (connected ?from ?to))
+        :effect (probabilistic
+            0.8 (and (at-robot ?to) (not (at-robot ?from)))
+            0.2 ()
+        )
+    )
+
+    (:action pickup
+        :parameters (?p - package ?l - location)
+        :precondition (and (at-robot ?l) (at-pkg ?p ?l))
+        :effect (probabilistic
+            0.9 (and (holding ?p) (not (at-pkg ?p ?l)))
+            0.1 ()
+        )
+    )
+
+    (:action drop
+        :parameters (?p - package ?l - location)
+        :precondition (and (at-robot ?l) (holding ?p))
+        :effect (and (delivered ?p ?l) (not (holding ?p)))
+    )
+
+    (:action noop
+        :parameters ()
+        :precondition ()
+        :effect ()
+    )
+)

@@ -1,0 +1,202 @@
+(define (domain prob_method_select_k10)
+    (:requirements :typing :hierarchy)
+    (:predicates (done))
+
+    (:task solve :parameters ())
+
+    (:method m_solve_0
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_0))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_1
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_1))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_2
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_2))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_3
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_3))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_4
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_4))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_5
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_5))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_6
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_6))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_7
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_7))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_8
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_8))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_9
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_9))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:action try_0
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.09090909 (done)
+            0.90909091 ()
+        )
+    )
+
+    (:action try_1
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.18181818 (done)
+            0.81818182 ()
+        )
+    )
+
+    (:action try_2
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.27272727 (done)
+            0.72727273 ()
+        )
+    )
+
+    (:action try_3
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.36363636 (done)
+            0.63636364 ()
+        )
+    )
+
+    (:action try_4
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.45454545 (done)
+            0.54545455 ()
+        )
+    )
+
+    (:action try_5
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.54545455 (done)
+            0.45454545 ()
+        )
+    )
+
+    (:action try_6
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.63636364 (done)
+            0.36363636 ()
+        )
+    )
+
+    (:action try_7
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.72727273 (done)
+            0.27272727 ()
+        )
+    )
+
+    (:action try_8
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.81818182 (done)
+            0.18181818 ()
+        )
+    )
+
+    (:action try_9
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.90909091 (done)
+            0.09090909 ()
+        )
+    )
+
+    (:action gate
+        :parameters ()
+        :precondition (done)
+        :effect ()
+    )
+)

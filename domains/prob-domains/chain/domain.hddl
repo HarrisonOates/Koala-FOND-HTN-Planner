@@ -1,0 +1,36 @@
+(define (domain prob_chain)
+    (:requirements :typing :hierarchy)
+    (:types step)
+    (:predicates
+        (done ?s - step)
+    )
+
+    (:task do_step :parameters (?s - step))
+
+    (:method m_do_step
+        :parameters (?s - step)
+        :task (do_step ?s)
+        :subtasks (and
+            (t0 (try_step ?s))
+            (t1 (gate ?s))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Nondeterministic step: p=0.9 succeeds, p=0.1 fails
+    (:action try_step
+        :parameters (?s - step)
+        :precondition ()
+        :effect (probabilistic
+            0.9 (done ?s)
+            0.1 ()
+        )
+    )
+
+    ;; Gate: only passable if the step succeeded
+    (:action gate
+        :parameters (?s - step)
+        :precondition (done ?s)
+        :effect ()
+    )
+)

@@ -1,0 +1,20 @@
+(define
+    (problem ventilation_1)
+    (:domain fail_ventilation)
+    (:objects
+        door_0 - door
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (inspect_door door_0))
+            (task1 (check_ventilation door_0))
+            (task2 (final_check))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+        )
+    )
+    (:init)
+)

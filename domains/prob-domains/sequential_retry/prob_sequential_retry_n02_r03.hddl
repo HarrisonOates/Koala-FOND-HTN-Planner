@@ -1,0 +1,24 @@
+(define
+    (problem prob_sequential_retry_n02_r03)
+    (:domain prob_sequential_retry)
+    (:objects
+        s0 s1 - step
+        s0r0 s0r1 s0r2 s1r0 s1r1 s1r2 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (t0 (do_phase s0 s0r0))
+            (t1 (do_phase s1 s1r0))
+        )
+        :ordering (and
+            (< t0 t1)
+        )
+    )
+    (:init
+        (next_rtoken s0r0 s0r1)
+        (next_rtoken s0r1 s0r2)
+        (next_rtoken s1r0 s1r1)
+        (next_rtoken s1r1 s1r2)
+    )
+)

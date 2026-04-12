@@ -1,0 +1,183 @@
+(define (domain prob_method_select_k09)
+    (:requirements :typing :hierarchy)
+    (:predicates (done))
+
+    (:task solve :parameters ())
+
+    (:method m_solve_0
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_0))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_1
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_1))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_2
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_2))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_3
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_3))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_4
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_4))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_5
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_5))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_6
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_6))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_7
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_7))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:method m_solve_8
+        :parameters ()
+        :task (solve)
+        :subtasks (and
+            (t0 (try_8))
+            (t1 (gate))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    (:action try_0
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.1 (done)
+            0.9 ()
+        )
+    )
+
+    (:action try_1
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.2 (done)
+            0.8 ()
+        )
+    )
+
+    (:action try_2
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.3 (done)
+            0.7 ()
+        )
+    )
+
+    (:action try_3
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.4 (done)
+            0.6 ()
+        )
+    )
+
+    (:action try_4
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.5 (done)
+            0.5 ()
+        )
+    )
+
+    (:action try_5
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.6 (done)
+            0.4 ()
+        )
+    )
+
+    (:action try_6
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.7 (done)
+            0.3 ()
+        )
+    )
+
+    (:action try_7
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.8 (done)
+            0.2 ()
+        )
+    )
+
+    (:action try_8
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic
+            0.9 (done)
+            0.1 ()
+        )
+    )
+
+    (:action gate
+        :parameters ()
+        :precondition (done)
+        :effect ()
+    )
+)

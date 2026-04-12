@@ -1,0 +1,31 @@
+(define
+ (problem prob_blocksworld_3)
+
+ (:domain blocks)
+
+ (:objects b1 b2 b3 - BLOCK)
+ (:htn
+  :ordered-tasks (and
+    (task0 (achieve-goals))
+  )
+ )
+(:init
+  (hand-empty)
+  (clear b1)
+  (clear b2)
+  (clear b3)
+  (on-table b1)
+  (on-table b2)
+  (on-table b3)
+  (goal_on-table b3)
+  (goal_on b2 b3)
+  (goal_on b1 b2)
+  (goal_clear b1))
+
+ (:goal (and
+  (on-table b3)
+  (on b2 b3)
+  (on b1 b2)
+  (clear b1)
+ ))
+)

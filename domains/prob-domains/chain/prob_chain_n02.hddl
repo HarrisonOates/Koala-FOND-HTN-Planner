@@ -1,0 +1,18 @@
+(define
+    (problem prob_chain_n02)
+    (:domain prob_chain)
+    (:objects
+        s0 s1 - step
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_step s0))
+            (task1 (do_step s1))
+        )
+        :ordering (and
+            (< task0 task1)
+        )
+    )
+    (:init)
+)

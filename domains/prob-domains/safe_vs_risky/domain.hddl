@@ -1,0 +1,72 @@
+(define (domain prob_safe_vs_risky)
+    (:requirements :typing :hierarchy)
+    (:types step rtoken)
+    (:predicates
+        (done ?s - step)
+        (next_rtoken ?t1 - rtoken ?t2 - rtoken)
+    )
+
+    (:task do_phase :parameters (?s - step ?t - rtoken))
+
+    ;; Risky: single high-prob attempt (p=0.85), then gate. No further retries.
+    (:method m_risky
+        :parameters (?s - step ?t - rtoken)
+        :task (do_phase ?s ?t)
+        :subtasks (and
+            (t0 (risky_try ?s))
+            (t1 (gate_phase ?s))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Safe base: single safe attempt (p=0.6), then gate. No further retries.
+    (:method m_safe_base
+        :parameters (?s - step ?t - rtoken)
+        :task (do_phase ?s ?t)
+        :subtasks (and
+            (t0 (safe_try ?s))
+            (t1 (gate_phase ?s))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Safe recurse: safe attempt, then continue to next token.
+    ;; Only applicable when a next rtoken exists.
+    (:method m_safe_recurse
+        :parameters (?s - step ?t - rtoken ?t_next - rtoken)
+        :task (do_phase ?s ?t)
+        :precondition (next_rtoken ?t ?t_next)
+        :subtasks (and
+            (t0 (safe_try ?s))
+            (t1 (do_phase ?s ?t_next))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Risky attempt: p=0.85 sets done(?s), p=0.15 does nothing.
+    (:action risky_try
+        :parameters (?s - step)
+        :precondition ()
+        :effect (probabilistic
+            0.85 (done ?s)
+            0.15 ()
+        )
+    )
+
+    ;; Safe attempt: p=0.6 sets done(?s), p=0.4 does nothing.
+    (:action safe_try
+        :parameters (?s - step)
+        :precondition ()
+        :effect (probabilistic
+            0.6 (done ?s)
+            0.4 ()
+        )
+    )
+
+    ;; Gate: only passable once done(?s) is set.
+    (:action gate_phase
+        :parameters (?s - step)
+        :precondition (done ?s)
+        :effect ()
+    )
+)

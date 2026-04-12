@@ -1,0 +1,32 @@
+(define
+    (problem prob_delivery_03)
+    (:domain prob_delivery)
+    (:objects
+        loc0 loc1 loc2 - location
+        pkg0 pkg1 pkg2 - package
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (deliver pkg0 loc1))
+            (task1 (deliver pkg1 loc2))
+            (task2 (deliver pkg2 loc0))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+        )
+    )
+    (:init
+        (at-robot loc0)
+        (at-pkg pkg0 loc0)
+        (at-pkg pkg1 loc1)
+        (at-pkg pkg2 loc2)
+        (connected loc0 loc1)
+        (connected loc0 loc2)
+        (connected loc1 loc0)
+        (connected loc1 loc2)
+        (connected loc2 loc0)
+        (connected loc2 loc1)
+    )
+)

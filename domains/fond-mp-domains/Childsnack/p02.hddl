@@ -1,0 +1,55 @@
+(define (problem prob-snack)
+(:domain child-snack)
+
+;---------------- Facts -----------------------
+(:objects
+child1 child2 child3 child4 - child
+bread1 bread2 bread3 bread4 - bread-portion
+content1 content2 content3 content4 content5 content6 - content-portion
+tray1 tray2 tray3 - tray
+table1 table2 - place
+sandw1 sandw2 sandw3 sandw4 - sandwich
+)
+
+;--------------- Initial State -----------------
+(:htn
+    :parameters ()
+    :ordered-subtasks (and
+    (task1  (serve child1 ))
+    (task2  (serve child2 ))
+    (task3  (serve child3 ))
+    (task4  (serve child4 ))
+    )
+)
+(:init
+    (at tray1 kitchen)
+    (at tray2 kitchen)
+    (at tray3 kitchen)
+    (at_kitchen_bread bread1)
+    (at_kitchen_bread bread2)
+    (at_kitchen_bread bread3)
+    (at_kitchen_bread bread4)
+    (at_kitchen_content content1)
+    (at_kitchen_content content2)
+    (at_kitchen_content content3)
+    (at_kitchen_content content4)
+    (at_kitchen_content content5)
+    (at_kitchen_content content6)
+    (no_gluten_bread bread2)
+    (no_gluten_content content2)
+    (no_gluten_content content5)
+    (no_gluten_content content6)
+    (allergic_gluten child1)
+    (not_allergic_gluten child2)
+    (not_allergic_gluten child3)
+    (not_allergic_gluten child4)
+    (waiting child1 table2)
+    (waiting child2 table1)
+    (waiting child3 table1)
+    (waiting child4 table2)
+    (notexist sandw1)
+    (notexist sandw2)
+    (notexist sandw3)
+    (notexist sandw4)
+)
+)

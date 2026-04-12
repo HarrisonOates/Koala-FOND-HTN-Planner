@@ -1,0 +1,9 @@
+(define
+    (problem prob_method_select_k06)
+    (:domain prob_method_select_k06)
+    (:htn
+        :parameters ()
+        :subtasks (and (task0 (solve)))
+    )
+    (:init)
+)

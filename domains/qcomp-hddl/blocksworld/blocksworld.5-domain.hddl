@@ -1,0 +1,10630 @@
+(define (domain jani_from_ppddl)
+	(:requirements :typing :hierarchy)
+	(:types bool loc int num)
+	(:constants
+		goal_condition - bool
+		var0 - int
+		var1 - int
+		var2 - int
+		var3 - int
+		var4 - int
+		var5 - int
+		var6 - int
+		var7 - int
+		var8 - int
+		var9 - int
+		var10 - int
+		loc0_aut - loc
+		n0 n1 n2 n3 n4 n5 n6 n7 - num
+	)
+	(:predicates
+		(fulfiled ?x - bool)
+		(at ?l - loc)
+		(value ?v - int ?n - num)
+	)
+
+	;; HTN task
+	(:task solve :parameters ())
+	(:method m_solve_done
+		:parameters ()
+		:task (solve)
+		:precondition (fulfiled goal_condition)
+		:subtasks ()
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_1
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_1 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_2
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_2 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_3
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_3 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_4
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_4 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_5
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_5 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_6
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_6 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_7
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_7 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_8
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_8 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_9
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_9 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_10
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_10 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_11
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_11 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_12
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_12 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_13
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_13 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_14
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_14 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_15
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_15 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_16
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_16 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_17
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_17 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_18
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_18 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_19
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_19 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_20
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_20 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_21
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_21 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_22
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_22 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_23
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_23 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_24
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_24 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_25
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_25 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_26
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_26 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_27
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_27 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_28
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_28 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_29
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_29 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_30
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_30 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_31
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_31 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_32
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_32 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_33
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_33 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_34
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_34 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_35
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_35 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_36
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_36 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_37
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_37 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_38
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_38 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_39
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_39 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_40
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_40 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_41
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_41 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_42
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_42 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_43
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_43 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_44
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_44 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_45
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_45 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_46
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_46 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_47
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_47 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_48
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_48 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_49
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_49 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_50
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_50 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_51
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_51 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_52
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_52 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_53
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_53 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_54
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_54 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_55
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_55 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_56
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_56 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_57
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_57 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_58
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_58 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_59
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_59 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_60
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_60 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_61
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_61 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_62
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_62 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_63
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_63 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_64
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_64 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_65
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_65 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_66
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_66 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_67
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_67 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_68
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_68 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_69
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_69 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_70
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_70 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_71
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_71 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_72
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_72 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_73
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_73 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_74
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_74 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_75
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_75 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_76
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_76 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_77
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_77 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_78
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_78 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_79
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_79 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_80
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_80 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_81
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_81 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_82
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_82 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_83
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_83 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_84
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_84 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_85
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_85 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_86
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_86 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_87
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_87 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_88
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_88 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_89
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_89 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_90
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_90 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_91
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_91 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_92
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_92 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_93
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_93 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_94
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_94 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_95
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_95 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_96
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_96 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_97
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_97 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_98
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_98 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_99
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_99 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_100
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_100 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_101
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_101 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_102
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_102 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_103
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_103 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_104
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_104 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_105
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_105 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_106
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_106 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_107
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_107 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_108
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_108 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_109
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_109 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_110
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_110 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_111
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_111 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_112
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_112 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_113
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_113 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_114
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_114 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_115
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_115 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_116
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_116 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_117
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_117 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_118
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_118 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_119
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_119 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_120
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_120 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_121
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_121 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_122
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_122 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_123
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_123 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_124
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_124 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_125
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_125 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_126
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_126 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_127
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_127 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_128
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_128 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_129
+		:parameters (
+		 ?vvar4 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_129 ?vvar4))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_130
+		:parameters (
+		 ?vvar0 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_130 ?vvar0))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_131
+		:parameters (
+		 ?vvar1 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_131 ?vvar1))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_132
+		:parameters (
+		 ?vvar2 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_132 ?vvar2))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_133
+		:parameters (
+		 ?vvar3 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_133 ?vvar3))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_134
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_134 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_1
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_1 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_2
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_2 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_3
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_3 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_4
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_4 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_135
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_135 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_136
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_136 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_137
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_137 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_138
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_138 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_139
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_139 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_140
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_140 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_141
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_141 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_142
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_142 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_143
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_143 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_144
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_144 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_145
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_145 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_146
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_146 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_147
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_147 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_148
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_148 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_149
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_149 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_150
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_150 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_151
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_151 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_152
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_152 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_153
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_153 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_154
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_154 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_5
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_5 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_6
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_6 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_7
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_7 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_8
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_8 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_9
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_9 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_10
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_10 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_11
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_11 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_12
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_12 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_13
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_13 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_14
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_14 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_15
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_15 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_16
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_16 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_17
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_17 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_18
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_18 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_19
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_19 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_20
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_20 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_21
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_21 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_22
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_22 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_23
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_23 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc00_24
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc00_24 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_155
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_155 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_156
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_156 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_157
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_157 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_158
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_158 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_159
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_159 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_160
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_160 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_161
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_161 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_162
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_162 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_163
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_163 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_164
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_164 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_165
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_165 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_166
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_166 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_167
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_167 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_168
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_168 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_169
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_169 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_170
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_170 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_171
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_171 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_172
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_172 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_173
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_173 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_174
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_174 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_175
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_175 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_176
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_176 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_177
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_177 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_178
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_178 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_179
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_179 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_180
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_180 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_181
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_181 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_182
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_182 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_183
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_183 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_184
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_184 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_185
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_185 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_186
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_186 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_187
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_187 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_188
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_188 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_189
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_189 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_190
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_190 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_191
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_191 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_192
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_192 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_193
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_193 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_194
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_194 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_195
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_195 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_196
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_196 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_197
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_197 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_198
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_198 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_199
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_199 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_200
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_200 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_201
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_201 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_202
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_202 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_203
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_203 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_204
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_204 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_205
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_205 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_206
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_206 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_207
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_207 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_208
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_208 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_209
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_209 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_210
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_210 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_211
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_211 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_212
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_212 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_213
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_213 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_214
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_214 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_215
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_215 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_216
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_216 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_217
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_217 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_218
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_218 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_219
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_219 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_220
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_220 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_221
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_221 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_222
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_222 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_223
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_223 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_224
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_224 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_225
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_225 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_226
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_226 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_227
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_227 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_228
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_228 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_229
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_229 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_230
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_230 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_231
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_231 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_232
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_232 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_233
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_233 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_aut_loc0_to_loc0_loc00_234
+		:parameters (
+		 ?vvar10 - num
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (aut_loc0_to_loc0_loc00_234 ?vvar10))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:method m_solve_achieveGoal0
+		:parameters (
+		)
+		:task (solve)
+		:subtasks (and
+			(t0 (achieveGoal0 ))
+			(t1 (solve))
+		)
+		:ordering (and (< t0 t1))
+	)
+
+	(:action aut_loc0_to_loc0_loc00
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var5 n1)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_1
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var6 n1)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_2
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var6 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var6 n2)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_3
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var6 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var6 n3)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_4
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var6 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var6 n4)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_5
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var6 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var6 n5)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_6
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var7 n1)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_7
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var7 n2)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_8
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var7 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var7 n3)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_9
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var7 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var7 n4)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_10
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var7 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var7 n5)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_11
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var8 n1)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_12
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var8 n2)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_13
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var8 n3)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_14
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var8 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var8 n4)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_15
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var8 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var8 n5)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_16
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var9 n1)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_17
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var9 n2)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_18
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var9 n3)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_19
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var9 n4)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_20
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var9 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var9 n5)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_21
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n1)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var5 n1)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_22
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var5 n2)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_23
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var5 n3)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_24
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var5 n4)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_25
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var5 n5)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_26
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var6 n2)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_27
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var7 n1)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_28
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var7 n2)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_29
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var7 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var7 n3)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_30
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var7 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var7 n4)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_31
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var7 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var7 n5)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_32
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var8 n1)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_33
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var8 n2)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_34
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var8 n3)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_35
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var8 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var8 n4)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_36
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var8 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var8 n5)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_37
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var9 n1)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_38
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var9 n2)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_39
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var9 n3)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_40
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var9 n4)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_41
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var9 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var9 n5)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_42
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n1)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var5 n1)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_43
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var5 n2)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_44
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var5 n3)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_45
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var5 n4)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_46
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var5 n5)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_47
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n1)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var6 n1)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_48
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n2)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var6 n2)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_49
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var6 n3)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_50
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var6 n4)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_51
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var6 n5)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_52
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var7 n3)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_53
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var8 n1)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_54
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var8 n2)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_55
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var8 n3)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_56
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var8 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var8 n4)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_57
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var8 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var8 n5)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_58
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var9 n1)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_59
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var9 n2)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_60
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var9 n3)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_61
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var9 n4)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_62
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var9 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var9 n5)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_63
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n1)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var5 n1)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_64
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var5 n2)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_65
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var5 n3)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_66
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var5 n4)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_67
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var5 n5)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_68
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n1)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var6 n1)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_69
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n2)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var6 n2)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_70
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var6 n3)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_71
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var6 n4)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_72
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var6 n5)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_73
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n1)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var7 n1)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_74
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n2)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var7 n2)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_75
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n3)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var7 n3)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_76
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var7 n4)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_77
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var7 n5)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_78
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var8 n4)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_79
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n5)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var9 n1)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_80
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n5)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var9 n2)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_81
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n5)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var9 n3)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_82
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n5)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var9 n4)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_83
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n5)
+
+							(and 
+							(value var9 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var9 n5)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_84
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n1)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var5 n1)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_85
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n2)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var5 n2)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_86
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var5 n3)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_87
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n4)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var5 n4)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_88
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n5)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var5 n5)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_89
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n1)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var6 n1)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_90
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n2)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var6 n2)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_91
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n3)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var6 n3)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_92
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var6 n4)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_93
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n5)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var6 n5)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_94
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n1)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var7 n1)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_95
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n2)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var7 n2)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_96
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n3)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var7 n3)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_97
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n4)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var7 n4)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_98
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n5)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var7 n5)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_99
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var8 n1)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var8 n1)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_100
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var8 n2)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var8 n2)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_101
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var8 n3)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var8 n3)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_102
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var8 n4)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var8 n4)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_103
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var8 n5)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var8 n5)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_104
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var9 n5)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.9 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_105
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n6)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var5 n6)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.25 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_106
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n6)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var6 n6)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.25 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_107
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n6)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var7 n6)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.25 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_108
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n6)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var8 n6)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.25 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_109
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n6)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var9 n6)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.25 ()
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_110
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var5 n1)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var5 n1)) (value var5 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_111
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var5 n2)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var5 n2)) (value var5 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_112
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var5 n3)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var5 n3)) (value var5 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_113
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var5 n4)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var5 n4)) (value var5 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_114
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var5 n5)) (value var5 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var5 n5)) (value var5 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_115
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var6 n1)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var6 n1)) (value var6 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_116
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var6 n2)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var6 n2)) (value var6 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_117
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var6 n3)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var6 n3)) (value var6 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_118
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var6 n4)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var6 n4)) (value var6 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_119
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var6 n5)) (value var6 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var6 n5)) (value var6 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_120
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var7 n1)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var7 n1)) (value var7 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_121
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var7 n2)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var7 n2)) (value var7 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_122
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var7 n3)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var7 n3)) (value var7 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_123
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var7 n4)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var7 n4)) (value var7 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_124
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var7 n5)) (value var7 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var7 n5)) (value var7 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_125
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var8 n1)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var8 n1)) (value var8 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_126
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var8 n2)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var8 n2)) (value var8 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_127
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var8 n3)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var8 n3)) (value var8 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_128
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var8 n4)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var8 n4)) (value var8 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_129
+		:parameters (
+		 ?vvar4 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var8 n5)) (value var8 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var4 ?vvar4)) (value var4 n0) (not (value var8 n5)) (value var8 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_130
+		:parameters (
+		 ?vvar0 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n1)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var9 n1)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var0 ?vvar0)) (value var0 n0) (not (value var9 n1)) (value var9 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_131
+		:parameters (
+		 ?vvar1 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var9 n2)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var1 ?vvar1)) (value var1 n0) (not (value var9 n2)) (value var9 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_132
+		:parameters (
+		 ?vvar2 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n3)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var9 n3)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var2 ?vvar2)) (value var2 n0) (not (value var9 n3)) (value var9 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_133
+		:parameters (
+		 ?vvar3 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n4)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var9 n4)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var3 ?vvar3)) (value var3 n0) (not (value var9 n4)) (value var9 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_134
+		:parameters (
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var9 n5)
+
+							(value var10 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var9 n5)) (value var9 n0) (not (value var10 n0)) (value var10 n1))
+			0.25
+				(and (not (value var9 n5)) (value var9 n6))
+		)
+	)
+
+	(:action aut_loc0_to_loc00
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(value var5 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_1
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(value var6 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_2
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(value var7 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_3
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(value var8 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_4
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(value var9 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_135
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var1 n0)
+
+							(value var5 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 n0)) (value var1 n1) (not (value var5 n0)) (value var5 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_136
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var2 n0)
+
+							(value var5 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 n0)) (value var2 n1) (not (value var5 n0)) (value var5 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_137
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var3 n0)
+
+							(value var5 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 n0)) (value var3 n1) (not (value var5 n0)) (value var5 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_138
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var5 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 n0)) (value var4 n1) (not (value var5 n0)) (value var5 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_139
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var1 n0)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 n0)) (value var0 n1) (not (value var6 n0)) (value var6 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_140
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var2 n0)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 n0)) (value var2 n1) (not (value var6 n0)) (value var6 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_141
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var3 n0)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 n0)) (value var3 n1) (not (value var6 n0)) (value var6 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_142
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 n0)) (value var4 n1) (not (value var6 n0)) (value var6 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_143
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var2 n0)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 n0)) (value var0 n1) (not (value var7 n0)) (value var7 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_144
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var2 n0)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 n0)) (value var1 n1) (not (value var7 n0)) (value var7 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_145
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var3 n0)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 n0)) (value var3 n1) (not (value var7 n0)) (value var7 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_146
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 n0)) (value var4 n1) (not (value var7 n0)) (value var7 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_147
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var3 n0)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 n0)) (value var0 n1) (not (value var8 n0)) (value var8 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_148
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var3 n0)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 n0)) (value var1 n1) (not (value var8 n0)) (value var8 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_149
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var3 n0)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 n0)) (value var2 n1) (not (value var8 n0)) (value var8 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_150
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var4 n0)) (value var4 n1) (not (value var8 n0)) (value var8 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_151
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var0 n0)) (value var0 n1) (not (value var9 n0)) (value var9 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_152
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var1 n0)) (value var1 n1) (not (value var9 n0)) (value var9 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_153
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var2 n0)) (value var2 n1) (not (value var9 n0)) (value var9 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_154
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var4 n0)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.75
+				(and (not (value var3 n0)) (value var3 n1) (not (value var9 n0)) (value var9 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.25
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_5
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n2)
+
+							(value var6 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_6
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n3)
+
+							(value var7 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_7
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n4)
+
+							(value var8 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_8
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n5)
+
+							(value var9 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_9
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n0)
+
+							(value var6 n1)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_10
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var6 n3)
+
+							(value var7 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_11
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var6 n4)
+
+							(value var8 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_12
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var6 n5)
+
+							(value var9 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_13
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n0)
+
+							(value var7 n1)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_14
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var6 n0)
+
+							(value var7 n2)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_15
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var7 n4)
+
+							(value var8 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_16
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var7 n5)
+
+							(value var9 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_17
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n0)
+
+							(value var8 n1)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_18
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var6 n0)
+
+							(value var8 n2)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_19
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var7 n0)
+
+							(value var8 n3)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_20
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var8 n5)
+
+							(value var9 n0)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_21
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var5 n0)
+
+							(value var9 n1)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_22
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var6 n0)
+
+							(value var9 n2)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_23
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var7 n0)
+
+							(value var9 n3)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc00_24
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var8 n0)
+
+							(value var9 n4)
+
+			)
+)
+		
+		:effect (probabilistic
+			1
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_155
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n2)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var6 n0)) (value var6 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_156
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n2)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var6 n0)) (value var6 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_157
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n2)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var6 n0)) (value var6 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_158
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n2)
+
+							(value var6 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var6 n0)) (value var6 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_159
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var7 n0)) (value var7 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_160
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var7 n0)) (value var7 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_161
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var7 n0)) (value var7 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_162
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var7 n0)) (value var7 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_163
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var8 n0)) (value var8 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_164
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var8 n0)) (value var8 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_165
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var8 n0)) (value var8 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_166
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var8 n0)) (value var8 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_167
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var9 n0)) (value var9 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_168
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var9 n0)) (value var9 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_169
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var9 n0)) (value var9 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_170
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var9 n0)) (value var9 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_171
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var6 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var5 n0)) (value var5 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_172
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var6 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var5 n0)) (value var5 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_173
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var6 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var5 n0)) (value var5 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_174
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var6 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var5 n0)) (value var5 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_175
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var6 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var7 n0)) (value var7 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_176
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var7 n0)) (value var7 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_177
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var7 n0)) (value var7 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_178
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n3)
+
+							(value var7 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var7 n0)) (value var7 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_179
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var6 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var8 n0)) (value var8 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_180
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var8 n0)) (value var8 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_181
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var8 n0)) (value var8 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_182
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var8 n0)) (value var8 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_183
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var6 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var9 n0)) (value var9 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_184
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var9 n0)) (value var9 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_185
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var9 n0)) (value var9 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_186
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var9 n0)) (value var9 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_187
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var7 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var5 n0)) (value var5 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_188
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var7 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var5 n0)) (value var5 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_189
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var7 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var5 n0)) (value var5 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_190
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var7 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var5 n0)) (value var5 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_191
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var7 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var6 n0)) (value var6 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_192
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var7 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var6 n0)) (value var6 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_193
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var7 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var6 n0)) (value var6 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_194
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var7 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var6 n0)) (value var6 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_195
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var7 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var8 n0)) (value var8 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_196
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var7 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var8 n0)) (value var8 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_197
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var8 n0)) (value var8 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_198
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n4)
+
+							(value var8 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var8 n0)) (value var8 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_199
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var7 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var9 n0)) (value var9 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_200
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var7 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var9 n0)) (value var9 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_201
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var9 n0)) (value var9 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_202
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var9 n0)) (value var9 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_203
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var8 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var5 n0)) (value var5 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_204
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var8 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var5 n0)) (value var5 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_205
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var8 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var5 n0)) (value var5 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_206
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var8 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var5 n0)) (value var5 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_207
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var8 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var6 n0)) (value var6 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_208
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var8 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var6 n0)) (value var6 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_209
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var8 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var6 n0)) (value var6 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_210
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var8 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var6 n0)) (value var6 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_211
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var8 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var7 n0)) (value var7 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_212
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var8 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var7 n0)) (value var7 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_213
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var8 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var7 n0)) (value var7 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_214
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var8 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var7 n0)) (value var7 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_215
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var8 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var9 n0)) (value var9 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_216
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var8 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var9 n0)) (value var9 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_217
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var8 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var9 n0)) (value var9 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_218
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var8 n5)
+
+							(value var9 n0)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var4 n0)) (value var4 n1) (not (value var9 n0)) (value var9 n5) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var9 n0)) (value var9 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_219
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var9 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var5 n0)) (value var5 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_220
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var9 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var5 n0)) (value var5 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_221
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var9 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var5 n0)) (value var5 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_222
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var5 n0)
+
+							(value var9 n1)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var5 n0)) (value var5 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var5 n0)) (value var5 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_223
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var9 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var6 n0)) (value var6 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_224
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var9 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var6 n0)) (value var6 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_225
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var9 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var6 n0)) (value var6 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_226
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var6 n0)
+
+							(value var9 n2)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var6 n0)) (value var6 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var6 n0)) (value var6 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_227
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var9 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var7 n0)) (value var7 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_228
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var9 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var7 n0)) (value var7 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_229
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var9 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var7 n0)) (value var7 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_230
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var7 n0)
+
+							(value var9 n3)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var7 n0)) (value var7 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var7 n0)) (value var7 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_231
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var0 n0)
+
+							(and 
+							(value var8 n0)
+
+							(value var9 n4)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var0 n0)) (value var0 n1) (not (value var8 n0)) (value var8 n1) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_232
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var1 n0)
+
+							(and 
+							(value var8 n0)
+
+							(value var9 n4)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var1 n0)) (value var1 n1) (not (value var8 n0)) (value var8 n2) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_233
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var2 n0)
+
+							(and 
+							(value var8 n0)
+
+							(value var9 n4)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var2 n0)) (value var2 n1) (not (value var8 n0)) (value var8 n3) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action aut_loc0_to_loc0_loc00_234
+		:parameters (
+		 ?vvar10 - num
+		)
+		:precondition (
+			and 
+			(at loc0_aut)
+			(and 
+							(value var3 n0)
+
+							(and 
+							(value var8 n0)
+
+							(value var9 n4)
+
+			)
+
+			)
+)
+		
+		:effect (probabilistic
+			0.1
+				(and (not (value var3 n0)) (value var3 n1) (not (value var8 n0)) (value var8 n4) (not (value var10 ?vvar10)) (value var10 n0))
+			0.9
+				(and (not (value var8 n0)) (value var8 n6) (not (value var10 ?vvar10)) (value var10 n0))
+		)
+	)
+
+	(:action achieveGoal0
+		:parameters (
+		)
+		:precondition
+			(and 
+							(value var4 n0)
+
+							(and 
+							(value var5 n3)
+
+							(and 
+							(value var6 n4)
+
+							(and 
+							(value var7 n6)
+
+							(and 
+							(value var8 n1)
+
+							(and 
+							(value var9 n2)
+
+							(value var10 n0)
+
+			)
+
+			)
+
+			)
+
+			)
+
+			)
+
+			)
+
+		:effect (fulfiled goal_condition)
+	)
+
+)
