@@ -1,0 +1,38 @@
+;; 5 rounds, 2 retries per round; bonus_available starts true.
+;;
+;; Optimal policy: cheat_bonus in round 1, fair arm in rounds 2-5.
+;; Round 1:   P ≈ 0.96
+;; Rounds 2-5: P ≈ 0.84 each
+;; Overall ≈ 0.96 × 0.84^4 ≈ 0.478
+(define
+    (problem prob_cheat_mab_n05_r02)
+    (:domain cheat_mab)
+    (:objects
+        r1 r2 r3 r4 r5 - round
+        r1t0 r1t1  r2t0 r2t1  r3t0 r3t1  r4t0 r4t1  r5t0 r5t1 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_round r1 r1t0))
+            (task1 (do_round r2 r2t0))
+            (task2 (do_round r3 r3t0))
+            (task3 (do_round r4 r4t0))
+            (task4 (do_round r5 r5t0))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+            (< task2 task3)
+            (< task3 task4)
+        )
+    )
+    (:init
+        (bonus_available)
+        (next_rtoken r1t0 r1t1)
+        (next_rtoken r2t0 r2t1)
+        (next_rtoken r3t0 r3t1)
+        (next_rtoken r4t0 r4t1)
+        (next_rtoken r5t0 r5t1)
+    )
+)

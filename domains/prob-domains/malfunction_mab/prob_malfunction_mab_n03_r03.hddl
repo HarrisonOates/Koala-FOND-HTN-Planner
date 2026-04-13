@@ -1,0 +1,27 @@
+;; 3 rounds, 3 retry tokens per round; primary arm starts functioning.
+(define
+    (problem prob_malfunction_mab_n03_r03)
+    (:domain malfunction_mab)
+    (:objects
+        r1 r2 r3 - round
+        r1t0 r1t1 r1t2  r2t0 r2t1 r2t2  r3t0 r3t1 r3t2 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_round r1 r1t0))
+            (task1 (do_round r2 r2t0))
+            (task2 (do_round r3 r3t0))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+        )
+    )
+    (:init
+        (primary_ok)
+        (next_rtoken r1t0 r1t1) (next_rtoken r1t1 r1t2)
+        (next_rtoken r2t0 r2t1) (next_rtoken r2t1 r2t2)
+        (next_rtoken r3t0 r3t1) (next_rtoken r3t1 r3t2)
+    )
+)

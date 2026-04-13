@@ -1,0 +1,142 @@
+;; Cheat Multi-Armed Bandit (TOHTN probabilistic)
+;;
+;; N rounds, two arms: the "cheat" arm and the "fair" arm.
+;;
+;;   Cheat arm (bonus):  p=0.9 success, but the one-time bonus is consumed
+;;                       after the first pull regardless of outcome.
+;;   Cheat arm (normal): p=0.35 success (post-bonus pulls)
+;;   Fair arm:           p=0.6  success, always available
+;;
+;; The (bonus_available) flag starts true and is removed on the first use of
+;; the cheat arm.  This is the non-Markovian aspect: the cheat arm's
+;; effectiveness depends on whether it has been used before.
+;;
+;; Method preconditions use only static facts (next_rtoken chain).
+;; The (bonus_available) constraint is enforced by pull_cheat_bonus's own
+;; precondition: when the bonus is gone, pull_cheat_bonus cannot execute and
+;; the planner avoids those methods.
+;;
+;; Optimal policy:
+;;   Round 1 → use cheat arm with bonus (p=0.9 per attempt)
+;;   Rounds 2..N → use fair arm (p=0.6 per attempt)
+;;   Retry tokens make each round reachable.
+(define (domain cheat_mab)
+    (:requirements :typing :hierarchy)
+    (:types round rtoken)
+    (:predicates
+        (done ?r - round)
+        (bonus_available)
+        (next_rtoken ?t1 - rtoken ?t2 - rtoken)
+    )
+
+    (:task do_round :parameters (?r - round ?t - rtoken))
+
+    ;; ── Cheat arm (bonus) methods ─────────────────────────────────────────
+    ;; No dynamic precondition: pull_cheat_bonus's precond enforces bonus_available.
+
+    ;; Last retry: cheat with bonus then gate
+    (:method m_cheat_bonus_base
+        :parameters (?r - round ?t - rtoken)
+        :task (do_round ?r ?t)
+        :subtasks (and
+            (t0 (pull_cheat_bonus ?r))
+            (t1 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: cheat with bonus, recurse
+    (:method m_cheat_bonus_retry
+        :parameters (?r - round ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (pull_cheat_bonus ?r))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Fair arm methods ─────────────────────────────────────────────────
+
+    ;; Last retry: fair arm then gate
+    (:method m_fair_base
+        :parameters (?r - round ?t - rtoken)
+        :task (do_round ?r ?t)
+        :subtasks (and
+            (t0 (pull_fair ?r))
+            (t1 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: fair arm, recurse
+    (:method m_fair_retry
+        :parameters (?r - round ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (pull_fair ?r))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Cheat arm (post-bonus) methods ───────────────────────────────────
+
+    ;; Last retry: cheat without bonus then gate
+    (:method m_cheat_normal_base
+        :parameters (?r - round ?t - rtoken)
+        :task (do_round ?r ?t)
+        :subtasks (and
+            (t0 (pull_cheat_normal ?r))
+            (t1 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: cheat without bonus, recurse
+    (:method m_cheat_normal_retry
+        :parameters (?r - round ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (pull_cheat_normal ?r))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Actions ──────────────────────────────────────────────────────────
+
+    ;; Cheat arm with bonus: p=0.9; bonus always consumed (win or lose)
+    (:action pull_cheat_bonus
+        :parameters (?r - round)
+        :precondition (bonus_available)
+        :effect (probabilistic
+            0.9 (and (done ?r) (not (bonus_available)))
+            0.1 (not (bonus_available))
+        )
+    )
+
+    ;; Cheat arm after bonus is gone: p=0.35
+    (:action pull_cheat_normal
+        :parameters (?r - round)
+        :precondition ()
+        :effect (probabilistic 0.35 (done ?r) 0.65 ())
+    )
+
+    ;; Fair arm: p=0.6, always applicable
+    (:action pull_fair
+        :parameters (?r - round)
+        :precondition ()
+        :effect (probabilistic 0.6 (done ?r) 0.4 ())
+    )
+
+    ;; Gate: blocks until the round is done
+    (:action gate_round
+        :parameters (?r - round)
+        :precondition (done ?r)
+        :effect ()
+    )
+)

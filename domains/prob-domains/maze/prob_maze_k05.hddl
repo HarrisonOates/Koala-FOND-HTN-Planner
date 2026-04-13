@@ -1,0 +1,42 @@
+;; 5-cell corridor, k=5 retry tokens per move step.
+;; Per-step success: 1 − 0.2^5 = 0.99968
+;; Overall (4 steps): 0.99968^4 ≈ 0.99872
+(define
+    (problem prob_maze_k05)
+    (:domain maze)
+    (:objects
+        c0 c1 c2 c3 c4 - cell
+        m0t0 m0t1 m0t2 m0t3 m0t4
+        m1t0 m1t1 m1t2 m1t3 m1t4
+        m2t0 m2t1 m2t2 m2t3 m2t4
+        m3t0 m3t1 m3t2 m3t3 m3t4 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (advance c0 c1 m0t0))
+            (task1 (advance c1 c2 m1t0))
+            (task2 (do_collect_key c2))
+            (task3 (advance c2 c3 m2t0))
+            (task4 (advance c3 c4 m3t0))
+            (task5 (do_enter_exit c4))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+            (< task2 task3)
+            (< task3 task4)
+            (< task4 task5)
+        )
+    )
+    (:init
+        (at c0)
+        (adj c0 c1) (adj c1 c2) (adj c2 c3) (adj c3 c4)
+        (key_cell c2)
+        (exit_cell c4)
+        (next_rtoken m0t0 m0t1) (next_rtoken m0t1 m0t2) (next_rtoken m0t2 m0t3) (next_rtoken m0t3 m0t4)
+        (next_rtoken m1t0 m1t1) (next_rtoken m1t1 m1t2) (next_rtoken m1t2 m1t3) (next_rtoken m1t3 m1t4)
+        (next_rtoken m2t0 m2t1) (next_rtoken m2t1 m2t2) (next_rtoken m2t2 m2t3) (next_rtoken m2t3 m2t4)
+        (next_rtoken m3t0 m3t1) (next_rtoken m3t1 m3t2) (next_rtoken m3t2 m3t3) (next_rtoken m3t3 m3t4)
+    )
+)

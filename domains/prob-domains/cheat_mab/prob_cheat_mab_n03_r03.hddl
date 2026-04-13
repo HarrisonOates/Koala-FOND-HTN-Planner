@@ -1,0 +1,32 @@
+;; 3 rounds, 3 retries per round; bonus_available starts true.
+;;
+;; More retries → higher success probability per round.
+;; Round 1:   P ≈ 0.9 + 0.1*(0.6 + 0.4*0.6) = 0.964
+;; Rounds 2-3: P ≈ 1 − 0.4^3 = 0.936 each
+;; Overall ≈ 0.964 × 0.936^2 ≈ 0.845
+(define
+    (problem prob_cheat_mab_n03_r03)
+    (:domain cheat_mab)
+    (:objects
+        r1 r2 r3 - round
+        r1t0 r1t1 r1t2  r2t0 r2t1 r2t2  r3t0 r3t1 r3t2 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_round r1 r1t0))
+            (task1 (do_round r2 r2t0))
+            (task2 (do_round r3 r3t0))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+        )
+    )
+    (:init
+        (bonus_available)
+        (next_rtoken r1t0 r1t1) (next_rtoken r1t1 r1t2)
+        (next_rtoken r2t0 r2t1) (next_rtoken r2t1 r2t2)
+        (next_rtoken r3t0 r3t1) (next_rtoken r3t1 r3t2)
+    )
+)

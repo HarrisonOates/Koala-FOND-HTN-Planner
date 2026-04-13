@@ -1,0 +1,32 @@
+;; 3 rounds, 2 retries per round; bonus_available starts true.
+;;
+;; Optimal policy: cheat_bonus in round 1 (p=0.9), fair in rounds 2-3 (p=0.6).
+;; Round 1:   P(done) ≈ 0.9 + 0.1*0.6 = 0.96  (bonus attempt, then fair retry)
+;; Rounds 2-3: P(done) ≈ 1 − 0.4^2 = 0.84 each
+;; Overall ≈ 0.96 × 0.84^2 ≈ 0.677
+(define
+    (problem prob_cheat_mab_n03_r02)
+    (:domain cheat_mab)
+    (:objects
+        r1 r2 r3 - round
+        r1t0 r1t1  r2t0 r2t1  r3t0 r3t1 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_round r1 r1t0))
+            (task1 (do_round r2 r2t0))
+            (task2 (do_round r3 r3t0))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+        )
+    )
+    (:init
+        (bonus_available)
+        (next_rtoken r1t0 r1t1)
+        (next_rtoken r2t0 r2t1)
+        (next_rtoken r3t0 r3t1)
+    )
+)

@@ -1,0 +1,119 @@
+;; Maze (TOHTN probabilistic)
+;;
+;; The agent navigates a corridor of cells, collecting a key before reaching
+;; the exit.  Movement is uncertain: with p=0.8 the agent advances to the
+;; intended adjacent cell; with p=0.2 it slips and stays in place.
+;;
+;; The key-before-exit ordering is the non-Markovian aspect of the RDP Maze
+;; from Abadi & Brafman (IJCAI 2020): the goal depends on the full history
+;; of movement, not just the current cell.  Here it is captured hierarchically:
+;; the HTN forces visiting the key cell before the exit is entered.
+;;
+;; Reachability: retry tokens per move step; with R retries, each step
+;; succeeds with probability 1 − 0.2^R.
+;;
+;; Problem layout (5 cells):
+;;   c0 (start) ─ c1 ─ c2 (key) ─ c3 ─ c4 (exit)
+;;
+;; Task decomposition:
+;;   do_maze →
+;;     advance(c0,c1), advance(c1,c2),
+;;     collect_key(c2),
+;;     advance(c2,c3), advance(c3,c4),
+;;     enter_exit(c4)
+(define (domain maze)
+    (:requirements :typing :hierarchy)
+    (:types cell rtoken)
+    (:predicates
+        (at ?c - cell)
+        (adj ?c1 - cell ?c2 - cell)
+        (key_cell ?c - cell)
+        (exit_cell ?c - cell)
+        (has_key)
+        (next_rtoken ?t1 - rtoken ?t2 - rtoken)
+    )
+
+    (:task advance        :parameters (?from - cell ?to - cell ?t - rtoken))
+    (:task do_collect_key :parameters (?c - cell))
+    (:task do_enter_exit  :parameters (?c - cell))
+
+    ;; ── advance: move from ?from to adjacent ?to (with retry) ────────────
+
+    ;; Last retry: one move attempt then gate_at checks arrival
+    (:method m_advance_base
+        :parameters (?from - cell ?to - cell ?t - rtoken)
+        :task (advance ?from ?to ?t)
+        :precondition (adj ?from ?to)
+        :subtasks (and
+            (t0 (move_step ?from ?to))
+            (t1 (gate_at ?to))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: attempt move, recurse if still at ?from
+    (:method m_advance_retry
+        :parameters (?from - cell ?to - cell ?t - rtoken ?tn - rtoken)
+        :task (advance ?from ?to ?t)
+        :precondition (and (adj ?from ?to) (next_rtoken ?t ?tn))
+        :subtasks (and
+            (t0 (move_step ?from ?to))
+            (t1 (advance ?from ?to ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── do_collect_key ────────────────────────────────────────────────────
+
+    (:method m_collect_key
+        :parameters (?c - cell)
+        :task (do_collect_key ?c)
+        :precondition (key_cell ?c)
+        :subtasks (and (t0 (pick_up_key ?c)))
+    )
+
+    ;; ── do_enter_exit ─────────────────────────────────────────────────────
+
+    (:method m_enter_exit
+        :parameters (?c - cell)
+        :task (do_enter_exit ?c)
+        :precondition (exit_cell ?c)
+        :subtasks (and (t0 (enter_exit ?c)))
+    )
+
+    ;; ── Actions ───────────────────────────────────────────────────────────
+
+    ;; Move forward: p=0.8 advance, p=0.2 slip (stay in place).
+    ;; Precondition omits (at ?from) so that retry calls after a successful move
+    ;; are harmless no-ops: the add/delete effects are already satisfied.
+    ;; Adjacency is guaranteed by the method preconditions (static fact).
+    (:action move_step
+        :parameters (?from - cell ?to - cell)
+        :precondition ()
+        :effect (probabilistic
+            0.8 (and (at ?to) (not (at ?from)))
+            0.2 ()
+        )
+    )
+
+    ;; Gate: blocks until agent has reached ?to
+    (:action gate_at
+        :parameters (?c - cell)
+        :precondition (at ?c)
+        :effect ()
+    )
+
+    ;; Pick up key (deterministic; agent must be at the key cell)
+    (:action pick_up_key
+        :parameters (?c - cell)
+        :precondition (and (at ?c) (key_cell ?c))
+        :effect (has_key)
+    )
+
+    ;; Enter exit (requires carrying the key)
+    (:action enter_exit
+        :parameters (?c - cell)
+        :precondition (and (at ?c) (exit_cell ?c) (has_key))
+        :effect ()
+    )
+)

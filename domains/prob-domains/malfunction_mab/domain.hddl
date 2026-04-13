@@ -1,0 +1,138 @@
+;; Malfunction Multi-Armed Bandit (TOHTN probabilistic)
+;;
+;; N rounds, two arm strategies: primary (high success, can malfunction) and
+;; backup (lower success, always reliable).
+;;
+;; Primary arm: p=0.8 success per pull, but with p=0.2 the arm malfunctions
+;; independently after each use (clears the (primary_ok) flag).
+;; Once malfunctioned, the planner must either repair it (costs one retry token)
+;; or switch to backup.  Repair is deterministic.
+;;
+;; Backup arm: p=0.5 success, never malfunctions.
+;;
+;; Within a round, the subtask chain is:
+;;   pull_primary → check_malfunction → gate / recurse
+;;   (or repair_primary → recurse, or pull_backup → gate / recurse)
+;;
+;; Method preconditions here use only STATIC facts (next_rtoken chain), which
+;; the grounder can resolve at ground time.  The (primary_ok) constraint is
+;; enforced by pull_primary's own precondition: when (primary_ok) is false,
+;; pull_primary cannot execute and the planner avoids those methods.
+;;
+;; Optimal policy: prefer primary (higher success rate), repair when
+;; malfunctioned, fall back to backup when tokens are scarce.
+(define (domain malfunction_mab)
+    (:requirements :typing :hierarchy)
+    (:types round rtoken)
+    (:predicates
+        (done ?r - round)
+        (primary_ok)
+        (next_rtoken ?t1 - rtoken ?t2 - rtoken)
+    )
+
+    (:task do_round :parameters (?r - round ?t - rtoken))
+
+    ;; ── Primary-arm methods ──────────────────────────────────────────────────
+    ;; No dynamic precondition: pull_primary's own precond enforces primary_ok.
+
+    ;; Last retry: pull primary, check malfunction, then gate
+    (:method m_primary_base
+        :parameters (?r - round ?t - rtoken)
+        :task (do_round ?r ?t)
+        :subtasks (and
+            (t0 (pull_primary ?r))
+            (t1 (check_malfunction))
+            (t2 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1) (< t1 t2))
+    )
+
+    ;; Retry: pull primary, check malfunction, recurse with next token
+    (:method m_primary_retry
+        :parameters (?r - round ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (pull_primary ?r))
+            (t1 (check_malfunction))
+            (t2 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1) (< t1 t2))
+    )
+
+    ;; ── Repair method ───────────────────────────────────────────────────────
+
+    ;; Spend a retry token to repair primary, then try again
+    (:method m_repair_retry
+        :parameters (?r - round ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (repair_primary))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Backup-arm methods ───────────────────────────────────────────────────
+
+    ;; Last retry: use backup then gate
+    (:method m_backup_base
+        :parameters (?r - round ?t - rtoken)
+        :task (do_round ?r ?t)
+        :subtasks (and
+            (t0 (pull_backup ?r))
+            (t1 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: use backup, recurse
+    (:method m_backup_retry
+        :parameters (?r - round ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (pull_backup ?r))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Actions ─────────────────────────────────────────────────────────────
+
+    ;; Primary arm pull: p=0.8 success (requires arm to be functioning)
+    (:action pull_primary
+        :parameters (?r - round)
+        :precondition (primary_ok)
+        :effect (probabilistic 0.8 (done ?r) 0.2 ())
+    )
+
+    ;; Post-pull malfunction check: p=0.2 the arm breaks independently
+    (:action check_malfunction
+        :parameters ()
+        :precondition ()
+        :effect (probabilistic 0.2 (not (primary_ok)) 0.8 ())
+    )
+
+    ;; Repair primary arm (deterministic, costs a retry token slot)
+    (:action repair_primary
+        :parameters ()
+        :precondition ()
+        :effect (primary_ok)
+    )
+
+    ;; Backup arm: p=0.5 success, no malfunction risk
+    (:action pull_backup
+        :parameters (?r - round)
+        :precondition ()
+        :effect (probabilistic 0.5 (done ?r) 0.5 ())
+    )
+
+    ;; Gate: blocks until the round is done
+    (:action gate_round
+        :parameters (?r - round)
+        :precondition (done ?r)
+        :effect ()
+    )
+)

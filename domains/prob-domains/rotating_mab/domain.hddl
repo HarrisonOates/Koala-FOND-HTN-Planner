@@ -1,0 +1,97 @@
+;; Rotating Multi-Armed Bandit (TOHTN probabilistic)
+;;
+;; N rounds, 3 arms. Each round exactly one arm is the "winner", encoded in
+;; the initial state via (winner ?r ?a) facts.  Rotating pattern is baked
+;; into the problem file (e.g. round 1→arm_a, round 2→arm_b, round 3→arm_c).
+;;
+;; Pulling the winner succeeds with p=0.8; pulling any other arm with p=0.2.
+;; Retry tokens make each round reachable: the planner can re-attempt up to R
+;; times before the final gate forces commitment.
+;;
+;; Optimal policy: always pull the winning arm for each round.
+;; Max success probability per round with R retries: 1 − 0.2^R.
+(define (domain rotating_mab)
+    (:requirements :typing :hierarchy)
+    (:types round arm rtoken)
+    (:predicates
+        (winner ?r - round ?a - arm)
+        (done ?r - round)
+        (next_rtoken ?t1 - rtoken ?t2 - rtoken)
+    )
+
+    (:task do_round :parameters (?r - round ?t - rtoken))
+
+    ;; ── Winning-arm methods ──────────────────────────────────────────────────
+
+    ;; Last retry: pull winner then gate (gate blocks until done(?r))
+    (:method m_pull_winner_base
+        :parameters (?r - round ?a - arm ?t - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (winner ?r ?a)
+        :subtasks (and
+            (t0 (pull_winner ?r ?a))
+            (t1 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: pull winner, then recurse with next token
+    (:method m_pull_winner_retry
+        :parameters (?r - round ?a - arm ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (and (winner ?r ?a) (next_rtoken ?t ?tn))
+        :subtasks (and
+            (t0 (pull_winner ?r ?a))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Fallback (non-winning arm) methods ──────────────────────────────────
+
+    ;; Last retry: pull non-winner then gate
+    (:method m_pull_other_base
+        :parameters (?r - round ?a - arm ?t - rtoken)
+        :task (do_round ?r ?t)
+        :subtasks (and
+            (t0 (pull_other ?r ?a))
+            (t1 (gate_round ?r))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; Retry: pull non-winner, recurse
+    (:method m_pull_other_retry
+        :parameters (?r - round ?a - arm ?t - rtoken ?tn - rtoken)
+        :task (do_round ?r ?t)
+        :precondition (next_rtoken ?t ?tn)
+        :subtasks (and
+            (t0 (pull_other ?r ?a))
+            (t1 (do_round ?r ?tn))
+        )
+        :ordering (and (< t0 t1))
+    )
+
+    ;; ── Actions ─────────────────────────────────────────────────────────────
+
+    ;; Winning-arm pull: p=0.8 success
+    (:action pull_winner
+        :parameters (?r - round ?a - arm)
+        :precondition (winner ?r ?a)
+        :effect (probabilistic 0.8 (done ?r) 0.2 ())
+    )
+
+    ;; Non-winning arm pull: p=0.2 success
+    (:action pull_other
+        :parameters (?r - round ?a - arm)
+        :precondition ()
+        :effect (probabilistic 0.2 (done ?r) 0.8 ())
+    )
+
+    ;; Gate: only clears when the round has been completed
+    (:action gate_round
+        :parameters (?r - round)
+        :precondition (done ?r)
+        :effect ()
+    )
+)

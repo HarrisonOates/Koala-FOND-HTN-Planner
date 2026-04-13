@@ -1,0 +1,37 @@
+;; 4 rounds, 3 retries per round
+;; Winner rotation: arm_a → arm_b → arm_c → arm_a (wraps)
+;; Max success probability (optimal policy): (1 − 0.2^3)^4 = 0.992^4 ≈ 0.9685
+(define
+    (problem prob_rotating_mab_n04_r03)
+    (:domain rotating_mab)
+    (:objects
+        r1 r2 r3 r4 - round
+        arm_a arm_b arm_c - arm
+        r1t0 r1t1 r1t2  r2t0 r2t1 r2t2
+        r3t0 r3t1 r3t2  r4t0 r4t1 r4t2 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_round r1 r1t0))
+            (task1 (do_round r2 r2t0))
+            (task2 (do_round r3 r3t0))
+            (task3 (do_round r4 r4t0))
+        )
+        :ordering (and
+            (< task0 task1)
+            (< task1 task2)
+            (< task2 task3)
+        )
+    )
+    (:init
+        (winner r1 arm_a)
+        (winner r2 arm_b)
+        (winner r3 arm_c)
+        (winner r4 arm_a)
+        (next_rtoken r1t0 r1t1) (next_rtoken r1t1 r1t2)
+        (next_rtoken r2t0 r2t1) (next_rtoken r2t1 r2t2)
+        (next_rtoken r3t0 r3t1) (next_rtoken r3t1 r3t2)
+        (next_rtoken r4t0 r4t1) (next_rtoken r4t1 r4t2)
+    )
+)

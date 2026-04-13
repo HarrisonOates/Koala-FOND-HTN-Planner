@@ -1,0 +1,24 @@
+;; 2 rounds, 3 retry tokens per round; primary arm starts functioning.
+;; Optimal policy: primary arm first (p=0.8 pull × p=0.8 no-malfunction = 0.64
+;; stay-healthy), repair and retry if malfunctioned, backup if tokens exhausted.
+(define
+    (problem prob_malfunction_mab_n02_r03)
+    (:domain malfunction_mab)
+    (:objects
+        r1 r2 - round
+        r1t0 r1t1 r1t2  r2t0 r2t1 r2t2 - rtoken
+    )
+    (:htn
+        :parameters ()
+        :subtasks (and
+            (task0 (do_round r1 r1t0))
+            (task1 (do_round r2 r2t0))
+        )
+        :ordering (and (< task0 task1))
+    )
+    (:init
+        (primary_ok)
+        (next_rtoken r1t0 r1t1) (next_rtoken r1t1 r1t2)
+        (next_rtoken r2t0 r2t1) (next_rtoken r2t1 r2t2)
+    )
+)
