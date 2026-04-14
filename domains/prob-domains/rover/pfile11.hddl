@@ -9,11 +9,11 @@
 	objective0 objective1 objective2 - objective
 	)
  (:htn
-  :tasks (and
-   (get_image_data objective1 high_res)
-   )
-  :ordering ( )
-  :constraints ( ))
+ :parameters ()
+  :subtasks (and
+  (task0 (get_image_data objective1 high_res))
+ )
+ )
 (:init
 	(visible waypoint0 waypoint4)
 	(visible waypoint4 waypoint0)

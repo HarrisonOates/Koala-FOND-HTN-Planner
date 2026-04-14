@@ -9,13 +9,17 @@
 	objective0 objective1 objective2 objective3 - objective
 	)
  (:htn
-  :tasks (and
-   (get_image_data objective0 colour)
-   (get_image_data objective2 low_res)
-   (get_image_data objective0 low_res)
-   )
-  :ordering ( )
-  :constraints ( ))
+ :parameters ()
+  :subtasks (and
+  (task0 (get_image_data objective0 colour))
+  (task1 (get_image_data objective2 low_res))
+  (task2 (get_image_data objective0 low_res))
+ )
+  :ordering (and
+  (< task0 task1)
+  (< task1 task2)
+ )
+ )
 (:init
 	(visible waypoint0 waypoint3)
 	(visible waypoint3 waypoint0)
